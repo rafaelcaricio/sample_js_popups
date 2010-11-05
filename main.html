@@ -1,0 +1,19 @@
+<html>
+    <title>My simple popup chat</title>
+    <script>
+        function main() {
+            var user1 = window.open("user.html", "", "left=20,top=10,width=500,height=400");
+            var user2 = window.open("user.html", "", "left=60,top=300,width=500,height=500");
+        }
+
+        function say(username, msg) {
+            document.getElementById("chat_panel").innerHTML += "<li><b>" + username + "</b> says: " + msg + "</li>";
+        }
+    </script>
+    <body>
+        <h1>My Window Chat</h1>
+        <input type="button" value="Start chat!" onclick="main()">
+        <li id="chat_panel">
+        </li>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+    <title>User window</title>
+    <script>
+        function send_message() {
+            window.opener.say(document.getElementById("username").value, 
+                              document.getElementById("msg").value);
+        }
+    </script>
+    <body>
+        <input type="text" id="username" value="Put your username here">
+        <input type="text" id="msg" value="Write you message here">
+        <input type="button" value="Send" onclick="send_message()">
+    </body>
+</html>
