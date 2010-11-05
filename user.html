@@ -5,8 +5,15 @@
             window.opener.say(document.getElementById("username").value, 
                               document.getElementById("msg").value);
         }
+
+        function say(username, msg) {
+            document.getElementById("chat_panel").innerHTML += "<li><b>" + username + "</b> says: " + msg + "</li>";
+            document.getElementById("msg").value = "";
+        }
     </script>
     <body>
+        <h1>My chat session</h1>
+        <li id="chat_panel"></li>
         <input type="text" id="username" value="Put your username here">
         <input type="text" id="msg" value="Write you message here">
         <input type="button" value="Send" onclick="send_message()">
